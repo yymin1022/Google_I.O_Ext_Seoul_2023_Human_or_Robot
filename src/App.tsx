@@ -17,4 +17,12 @@ const onChange = (e: any) => {
     console.log(e.toString());
 }
 
+const StopWatch = () => {
+    return (
+        <>
+            Stopwatch
+        </>
+    )
+}
+
 export default App;
