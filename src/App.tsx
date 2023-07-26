@@ -7,19 +7,24 @@ import KoreanTranslate from "./KoreanTranslate";
 const App = () => {
     const [isStart, setIsStart] = useState(false);
 
+    const onChange = () => {
+        console.log(new Date(curTime * 10).toISOString().slice(14, 22));
+    }
+
+    const finishGame = () => {
+        alert(new Date(curTime * 10).toISOString().slice(14, 22));
+        window.location.reload();
+    }
+
     return (
         <div>
             <StopWatch setIsStart={setIsStart}/>
             <ReCAPTCHA
                 sitekey={process.env.REACT_APP_GRECAPTCHA_KEY!}
                 onChange={onChange} />
-            <KoreanTranslate isStart={isStart} />
+            <KoreanTranslate isStart={isStart} finishGame={finishGame} />
         </div>
     );
-}
-
-const onChange = () => {
-    console.log(new Date(curTime * 10).toISOString().slice(14, 22));
 }
 
 export default App;
