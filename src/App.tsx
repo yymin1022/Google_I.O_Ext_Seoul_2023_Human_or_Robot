@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 
-import './App.css';
-
 const App = () => {
     return (
         <div>
