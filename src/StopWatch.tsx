@@ -1,15 +1,16 @@
-import React, {useState} from "react";
+import React, {ComponentProps, useState} from "react";
 
 export let curTime = 0;
 let isStart = false;
 let timer: NodeJS.Timer;
 
-const StopWatch = () => {
+const StopWatch = (props: ComponentProps<any>) => {
     const [curTimeStr, setCurTimeStr] = useState("00:00.000");
 
     const startStopwatch = () => {
         if(!isStart) {
             isStart = true;
+            props.setIsStart(true);
             timer = setInterval(() => {
                 if(isStart) {
                     curTime++;
@@ -25,6 +26,7 @@ const StopWatch = () => {
 
             curTime = 0;
             isStart = false;
+            props.setIsStart(false);
 
             clearInterval(timer);
             setCurTimeStr("00:00.000");
