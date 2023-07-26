@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 
+export let curTime = 0;
 let isStart = false;
 let timer: NodeJS.Timer;
 
 const StopWatch = () => {
     const [curTimeStr, setCurTimeStr] = useState("00:00.000");
-
-    let curTime = 0;
 
     const startStopwatch = () => {
         if(!isStart) {

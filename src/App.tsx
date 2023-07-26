@@ -1,7 +1,7 @@
 import React from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 
-import StopWatch from "./StopWatch";
+import StopWatch, {curTime} from "./StopWatch";
 
 const App = () => {
     return (
@@ -14,8 +14,8 @@ const App = () => {
     );
 }
 
-const onChange = (e: any) => {
-    console.log(e.toString());
+const onChange = () => {
+    console.log(new Date(curTime * 10).toISOString().slice(14, 22));
 }
 
 export default App;
