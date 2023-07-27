@@ -31,7 +31,7 @@ const App = () => {
                     onChange={onChange} />
             </RecaptchaContainer>
 
-            <KoreanTranslate isStart={isStart} finishGame={finishGame} />
+            <KoreanTranslate isHuman={isHuman} isStart={isStart} finishGame={finishGame} />
         </MainWrapper>
     );
 }

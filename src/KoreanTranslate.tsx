@@ -34,11 +34,15 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
     }, [props.isStart]);
 
     const btnDone = () => {
-        let strInput = inputRef.current!.value;
-        if(sentence!.ans === strInput) {
-            props.finishGame();
+        if(props.isHuman) {
+            let strInput = inputRef.current!.value;
+            if(sentence!.ans === strInput) {
+                props.finishGame();
+            } else {
+                setResultMessage("다시 입력해보세요!");
+            }
         } else {
-            setResultMessage("다시 입력해보세요!");
+            setResultMessage("사람인지 확인이 필요합니다!!");
         }
     }
 
