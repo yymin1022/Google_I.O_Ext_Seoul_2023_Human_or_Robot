@@ -36,7 +36,7 @@ const StopWatch = (props: ComponentProps<any>) => {
 
     return (
         <StopWatchWrapper>
-            <p>{curTimeStr}</p>
+            <StopWatchTimeView>{curTimeStr}</StopWatchTimeView>
 
             <StopWatchButtonContainer>
                 <button onClick={startStopwatch}>시작</button>
@@ -50,11 +50,26 @@ const StopWatch = (props: ComponentProps<any>) => {
 const StopWatchWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    
+    padding-top: 60px;
 `;
 
 const StopWatchButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
+  
+    margin: 30px;
+    
+    justify-content: center;
+`;
+
+const StopWatchTimeView = styled.p`
+    width: 100%;
+    
+    margin: 0;
+  
+    font-size: 40px;
+    text-align: center;
 `;
 
 export default StopWatch;
