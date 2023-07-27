@@ -50,8 +50,6 @@ const StopWatch = (props: ComponentProps<any>) => {
 const StopWatchWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    
-    padding-top: 60px;
 `;
 
 const StopWatchButtonContainer = styled.div`
@@ -66,7 +64,7 @@ const StopWatchButtonContainer = styled.div`
 const StopWatchTimeView = styled.p`
     width: 100%;
     
-    margin: 0;
+    margin: 60px 0 30px 0;
   
     font-size: 40px;
     text-align: center;
