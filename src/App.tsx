@@ -25,11 +25,16 @@ const App = () => {
         <MainWrapper>
             <StopWatch setIsStart={setIsStart}/>
 
-            <RecaptchaContainer>
-                <ReCAPTCHA
-                    sitekey={process.env.REACT_APP_GRECAPTCHA_KEY!}
-                    onChange={onChange} />
-            </RecaptchaContainer>
+            {
+                isStart ?
+                    <RecaptchaContainer>
+                        <ReCAPTCHA
+                            sitekey={process.env.REACT_APP_GRECAPTCHA_KEY!}
+                            onChange={onChange} />
+                    </RecaptchaContainer>
+                :
+                    <InfoText>준비되면 상단의 시작 버튼을 눌러주세요!</InfoText>
+            }
 
             <KoreanTranslate isHuman={isHuman} isStart={isStart} finishGame={finishGame} />
         </MainWrapper>
@@ -42,6 +47,13 @@ const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const InfoText = styled.p`
+    margin: 30px 0 30px 0;
+  
+    font-size: 40px;
+    text-align: center;
 `;
 
 const RecaptchaContainer = styled.div`
