@@ -1,6 +1,8 @@
 import React, {ComponentProps, useState} from "react";
 import styled from "styled-components";
 
+import CustomButton from "./CustomButton";
+
 export let curTime = 0;
 let isStart = false;
 let timer: NodeJS.Timer;
@@ -39,8 +41,8 @@ const StopWatch = (props: ComponentProps<any>) => {
             <StopWatchTimeView>{curTimeStr}</StopWatchTimeView>
 
             <StopWatchButtonContainer>
-                <button onClick={startStopwatch}>시작</button>
-                <button onClick={stopStopwatch}>취소</button>
+                <CustomButton onClick={startStopwatch}>시작</CustomButton>
+                <CustomButton onClick={stopStopwatch}>취소</CustomButton>
             </StopWatchButtonContainer>
 
         </StopWatchWrapper>

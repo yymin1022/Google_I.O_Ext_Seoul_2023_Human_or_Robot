@@ -1,6 +1,8 @@
 import {ComponentProps, useEffect, useRef, useState} from "react";
 import styled from "styled-components";
 
+import CustomButton from "./CustomButton";
+
 interface SentenceItem {
     org: String,
     ans: String
@@ -56,7 +58,7 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
                     <KoreanTranslateSentence></KoreanTranslateSentence>
             }
             <input ref={inputRef} type="text" />
-            <button onClick={btnDone}>완료!</button>
+            <CustomButton onClick={btnDone}>완료!</CustomButton>
         </KoreanTranslateWrapper>
     )
 }
