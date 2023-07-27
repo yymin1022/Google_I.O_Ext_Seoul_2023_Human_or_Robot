@@ -6,15 +6,19 @@ import StopWatch, {curTime} from "./StopWatch";
 import KoreanTranslate from "./KoreanTranslate";
 
 const App = () => {
+    const [isHuman, setIsHuman] = useState(false);
     const [isStart, setIsStart] = useState(false);
 
     const onChange = () => {
+        setIsHuman(true);
         console.log(new Date(curTime * 10).toISOString().slice(14, 22));
     }
 
     const finishGame = () => {
-        alert(new Date(curTime * 10).toISOString().slice(14, 22));
-        window.location.reload();
+        if(isHuman) {
+            alert(new Date(curTime * 10).toISOString().slice(14, 22));
+            window.location.reload();
+        }
     }
 
     return (
