@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import styled from "styled-components";
 
 import StopWatch, {curTime} from "./StopWatch";
 import KoreanTranslate from "./KoreanTranslate";
-import styled from "styled-components";
 
 const App = () => {
     const [isStart, setIsStart] = useState(false);
