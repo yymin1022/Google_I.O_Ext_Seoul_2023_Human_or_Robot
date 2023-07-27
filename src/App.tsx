@@ -20,9 +20,13 @@ const App = () => {
     return (
         <MainWrapper>
             <StopWatch setIsStart={setIsStart}/>
-            <ReCAPTCHA
-                sitekey={process.env.REACT_APP_GRECAPTCHA_KEY!}
-                onChange={onChange} />
+
+            <RecaptchaContainer>
+                <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_GRECAPTCHA_KEY!}
+                    onChange={onChange} />
+            </RecaptchaContainer>
+
             <KoreanTranslate isStart={isStart} finishGame={finishGame} />
         </MainWrapper>
     );
@@ -34,6 +38,14 @@ const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const RecaptchaContainer = styled.div`
+    margin: 30px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export default App;
