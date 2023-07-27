@@ -74,7 +74,7 @@ const KoreanTranslateSentence = styled.p`
     
     margin: 0 0 30px 0;
     
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
 `;
 
