@@ -1,4 +1,5 @@
 import {ComponentProps, useEffect, useRef, useState} from "react";
+import styled from "styled-components";
 
 interface SentenceItem {
     org: String,
@@ -42,18 +43,35 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
     }
 
     return (
-        <>
+        <KoreanTranslateWrapper>
             <p>{resultMessage}</p>
             {
                 sentence !== undefined ?
-                    <p>{sentence.org}</p>
+                    <KoreanTranslateSentence>{sentence.org}</KoreanTranslateSentence>
                 :
-                    <p>READY!!</p>
+                    <KoreanTranslateSentence>READY!!</KoreanTranslateSentence>
             }
             <input ref={inputRef} type="text" />
             <button onClick={btnDone}>완료!</button>
-        </>
+        </KoreanTranslateWrapper>
     )
 }
+
+const KoreanTranslateWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    justify-content: center;
+`;
+
+const KoreanTranslateSentence = styled.p`
+    width: 100%;
+    
+    margin: 0 0 30px 0;
+    
+    font-size: 40px;
+    text-align: center;
+`;
 
 export default KoreanTranslate;
