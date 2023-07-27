@@ -64,13 +64,13 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
 }
 
 const CustomInput = styled.input`
-    height: 32px;
+    height: 50px;
     width: 500px;
 
     padding: 0 10px 0 10px;
 
     background-color: #EEEEEE;
-    font-size: 15px;
+    font-size: 30px;
   
     border: none;
     border-radius: 15px;
