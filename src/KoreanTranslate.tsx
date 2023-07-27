@@ -38,7 +38,7 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
     const btnDone = () => {
         if(props.isHuman) {
             let strInput = inputRef.current!.value;
-            if(sentence!.ans === strInput) {
+            if(sentence!.ans === strInput.trim()) {
                 props.finishGame();
             } else {
                 setResultMessage("다시 입력해보세요!");
