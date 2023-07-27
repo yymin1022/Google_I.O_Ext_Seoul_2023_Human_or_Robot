@@ -33,7 +33,10 @@ const App = () => {
                             onChange={onChange} />
                     </RecaptchaContainer>
                 :
-                    <InfoText>준비되면 상단의 시작 버튼을 눌러주세요!</InfoText>
+                    <>
+                        <InfoText>준비되면 상단의 시작 버튼을 눌러주세요!</InfoText>
+                        <InfoTextSub>ReCAPTCHA를 풀고,<br/>한국인만 읽을 수 있는 문장을<br/>빠른 시간 내에 해석해주시면 됩니다.</InfoTextSub>
+                    </>
             }
 
             <KoreanTranslate isHuman={isHuman} isStart={isStart} finishGame={finishGame} />
@@ -50,10 +53,17 @@ const MainWrapper = styled.div`
 `;
 
 const InfoText = styled.p`
-    margin: 30px 0 30px 0;
+    margin: 30px 0 10px 0;
   
     font-size: 40px;
     text-align: center;
+`;
+
+const InfoTextSub = styled.p`
+  margin: 10px 0 30px 0;
+
+  font-size: 30px;
+  text-align: center;
 `;
 
 const RecaptchaContainer = styled.div`
