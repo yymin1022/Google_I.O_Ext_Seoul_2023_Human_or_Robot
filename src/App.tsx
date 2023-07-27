@@ -34,7 +34,7 @@ const App = () => {
                     </RecaptchaContainer>
                 :
                     <>
-                        <InfoText>준비되면 상단의 시작 버튼을 눌러주세요!</InfoText>
+                        <InfoText>상단의 시작 버튼을 눌러주세요!</InfoText>
                         <InfoTextSub>ReCAPTCHA를 풀고,<br/>한국인만 읽을 수 있는 문장을<br/>빠른 시간 내에 해석해주시면 됩니다.</InfoTextSub>
                     </>
             }
