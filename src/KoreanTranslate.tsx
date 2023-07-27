@@ -18,7 +18,7 @@ let sentenceData: Array<SentenceItem> = [
 ];
 
 const KoreanTranslate = (props: ComponentProps<any>) => {
-    const [sentence, setSentence] = useState<SentenceItem | undefined>(undefined);
+    const [sentence, setSentence] = useState<SentenceItem>({org:"", ans:""});
     const [resultMessage, setResultMessage] = useState<String>("");
 
     const inputRef = useRef<HTMLInputElement>(null);
@@ -29,7 +29,7 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
             let randIdx = Math.trunc(Math.random() * randMax);
             setSentence(sentenceData[randIdx]);
         } else {
-            setSentence(undefined);
+            setSentence({org:"", ans:""});
         }
     }, [props.isStart]);
 
@@ -46,7 +46,7 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
         <KoreanTranslateWrapper>
             <p>{resultMessage}</p>
             {
-                sentence !== undefined ?
+                sentence.org !== "" ?
                     <KoreanTranslateSentence>{sentence.org}</KoreanTranslateSentence>
                 :
                     <KoreanTranslateSentence>READY!!</KoreanTranslateSentence>
