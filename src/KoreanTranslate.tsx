@@ -27,8 +27,9 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
             let randMax = sentenceData.length;
             let randIdx = Math.trunc(Math.random() * randMax);
             setSentence(sentenceData[randIdx]);
+        } else {
+            setSentence(undefined);
         }
-
     }, [props.isStart]);
 
     const btnDone = () => {
