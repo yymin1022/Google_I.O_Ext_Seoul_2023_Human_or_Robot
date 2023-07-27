@@ -1,4 +1,4 @@
-import {ComponentProps, DOMElement, LegacyRef, MutableRefObject, useEffect, useRef, useState} from "react";
+import {ComponentProps, useEffect, useRef, useState} from "react";
 
 interface SentenceItem {
     org: String,
@@ -34,15 +34,15 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
     const btnDone = () => {
         let strInput = inputRef.current!.value;
         if(sentence!.ans === strInput) {
-            console.log("Wa!");
             props.finishGame();
         } else {
-            console.log("Sans!");
+            setResultMessage("다시 입력해보세요!");
         }
     }
 
     return (
         <>
+            <p>{resultMessage}</p>
             {
                 sentence !== undefined ?
                     <p>{sentence.org}</p>
@@ -50,7 +50,7 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
                     <p>READY!!</p>
             }
             <input ref={inputRef} type="text" />
-            <button onClick={btnDone}>Done!</button>
+            <button onClick={btnDone}>완료!</button>
         </>
     )
 }

@@ -36,8 +36,8 @@ const StopWatch = (props: ComponentProps<any>) => {
     return (
         <>
             <p>{curTimeStr}</p>
-            <button onClick={startStopwatch}>Start!</button>
-            <button onClick={stopStopwatch}>Stop!</button>
+            <button onClick={startStopwatch}>시작</button>
+            <button onClick={stopStopwatch}>취소</button>
         </>
     )
 }
