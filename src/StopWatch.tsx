@@ -69,7 +69,7 @@ const StopWatchTimeView = styled.p`
     
     margin: 60px 0 30px 0;
   
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
 `;
 
