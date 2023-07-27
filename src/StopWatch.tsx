@@ -1,4 +1,5 @@
 import React, {ComponentProps, useState} from "react";
+import styled from "styled-components";
 
 export let curTime = 0;
 let isStart = false;
@@ -34,12 +35,26 @@ const StopWatch = (props: ComponentProps<any>) => {
     }
 
     return (
-        <>
+        <StopWatchWrapper>
             <p>{curTimeStr}</p>
-            <button onClick={startStopwatch}>시작</button>
-            <button onClick={stopStopwatch}>취소</button>
-        </>
+
+            <StopWatchButtonContainer>
+                <button onClick={startStopwatch}>시작</button>
+                <button onClick={stopStopwatch}>취소</button>
+            </StopWatchButtonContainer>
+
+        </StopWatchWrapper>
     )
 }
+
+const StopWatchWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const StopWatchButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
 
 export default StopWatch;
