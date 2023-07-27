@@ -3,6 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 import StopWatch, {curTime} from "./StopWatch";
 import KoreanTranslate from "./KoreanTranslate";
+import styled from "styled-components";
 
 const App = () => {
     const [isStart, setIsStart] = useState(false);
@@ -17,14 +18,22 @@ const App = () => {
     }
 
     return (
-        <div>
+        <MainWrapper>
             <StopWatch setIsStart={setIsStart}/>
             <ReCAPTCHA
                 sitekey={process.env.REACT_APP_GRECAPTCHA_KEY!}
                 onChange={onChange} />
             <KoreanTranslate isStart={isStart} finishGame={finishGame} />
-        </div>
+        </MainWrapper>
     );
 }
+
+const MainWrapper = styled.div`
+  height: 100vw;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export default App;
