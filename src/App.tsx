@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
 
+import GDG_GDSC_LOGO from "./Images/gdg_gdsc_logo.png";
 import StopWatch, {curTime} from "./StopWatch";
 import KoreanTranslate from "./KoreanTranslate";
 
@@ -40,6 +41,9 @@ const App = () => {
             }
 
             <KoreanTranslate isHuman={isHuman} isStart={isStart} finishGame={finishGame} />
+
+            <FooterBanner alt="FooterBanner" src={GDG_GDSC_LOGO} />
+
         </MainWrapper>
     );
 }
@@ -50,6 +54,13 @@ const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const FooterBanner = styled.img`
+    width: 800px;
+    height: auto;
+  
+    margin-top: 30px;
 `;
 
 const InfoText = styled.p`
