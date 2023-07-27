@@ -53,7 +53,7 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
                 sentence.org !== "" ?
                     <KoreanTranslateSentence>{sentence.org}</KoreanTranslateSentence>
                 :
-                    <KoreanTranslateSentence>READY!!</KoreanTranslateSentence>
+                    <KoreanTranslateSentence></KoreanTranslateSentence>
             }
             <input ref={inputRef} type="text" />
             <button onClick={btnDone}>완료!</button>
@@ -72,7 +72,7 @@ const KoreanTranslateWrapper = styled.div`
 const KoreanTranslateSentence = styled.p`
     width: 100%;
     
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
     
     font-size: 30px;
     text-align: center;
