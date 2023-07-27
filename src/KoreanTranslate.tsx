@@ -57,11 +57,25 @@ const KoreanTranslate = (props: ComponentProps<any>) => {
                 :
                     <KoreanTranslateSentence></KoreanTranslateSentence>
             }
-            <input ref={inputRef} type="text" />
+            <CustomInput placeholder="여기에 입력해주세요" ref={inputRef} type="text" />
             <CustomButton onClick={btnDone}>완료!</CustomButton>
         </KoreanTranslateWrapper>
     )
 }
+
+const CustomInput = styled.input`
+    height: 32px;
+    width: 500px;
+
+    padding: 0 10px 0 10px;
+
+    background-color: #EEEEEE;
+    font-size: 15px;
+  
+    border: none;
+    border-radius: 15px;
+    outline: none;
+`;
 
 const KoreanTranslateWrapper = styled.div`
     display: flex;
