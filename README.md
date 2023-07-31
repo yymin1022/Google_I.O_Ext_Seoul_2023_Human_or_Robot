@@ -2,9 +2,7 @@
 
 빠른 시간 내에 ReCAPTCHA를 해제하고, 한국인만 읽을 수 있는 문장을 해석해 순위를 매기는 게임 액티비티입니다.
 
-<center>
-<img src="https://github.com/yymin1022/Google_I.O_Ext_Seoul_2023_Human_or_Robot/assets/12806229/64478cdf-0e85-4b6a-ba9e-c32ef51ee7f8" width="75%" alt="Screenshot"></img>
-</center>
+![image](https://github.com/yymin1022/Google_I.O_Ext_Seoul_2023_Human_or_Robot/assets/12806229/5ff45af7-8646-45a1-bfaf-7dd1d7820593)
 
 ### Tech Stacks
 - React.JS
