@@ -12,7 +12,9 @@
 ### How to Run
 [Docker Pull]
 1. 다음 [Dockerhub Repository](https://hub.docker.com/repository/docker/yymin1022/google-io-ext-seoul-2023-is-human/general)를 참고하여 컨테이너 이미지를 Pull 합니다.
-2. Pull 된 이미지를 기반으로 내부 80번 포트를 외부로 개설하여 컨테이너를 구동합니다.
+2. [Google ReCAPTCHA API]() 콘솔에서 웹앱을 등록하고, Key를 발급받습니다.
+3. Pull 된 이미지를 기반으로 내부 80번 포트를 외부로 개설하도록 설정합니다.
+4. 발급받은 Key를 `REACT_APP_GRECAPTCHA_KEY`라는 이름의 컨테이너 환경변수로 지정해주고 컨테이너를 구동합니다.
 
 [Self Build]
 1. 본 [Repository](https://github.com/yymin1022/Google_I.O_Ext_Seoul_2023_Human_or_Robot)를 Clone 합니다.
